@@ -12,27 +12,27 @@ public class Perguntas {
 	
 		System.out.print("Telefonou para a vítima?");
 		Boolean pergunta1=leitor.nextBoolean();
-		System.out.print("Esteve no local do crime?");
-		Boolean pergunta2=leitor.nextBoolean();
-		System.out.print("Mora perto da vítima?");
-		Boolean pergunta3=leitor.nextBoolean();
-		System.out.print("Devia para a vítima?");
-		Boolean pergunta4=leitor.nextBoolean();
-		System.out.print("Já trabalhou com a vítima?");
-		Boolean pergunta5=leitor.nextBoolean();
-		
 		if(pergunta1 == True) {
 			respostas++;
 			}
+		System.out.print("Esteve no local do crime?");
+		Boolean pergunta2=leitor.nextBoolean();
 		if(pergunta2 == True) {
 			respostas++;
 			}
+		System.out.print("Mora perto da vítima?");
+		Boolean pergunta3=leitor.nextBoolean();
 		if(pergunta3 == True) {
 			respostas++;
 			}
+		System.out.print("Devia para a vítima?");
+		Boolean pergunta4=leitor.nextBoolean();
 		if(pergunta4 == True) {
 			respostas++;
 			}
+
+		System.out.print("Já trabalhou com a vítima?");
+		Boolean pergunta5=leitor.nextBoolean();
 		if(pergunta5 == True) {
 			respostas++;
 			}
