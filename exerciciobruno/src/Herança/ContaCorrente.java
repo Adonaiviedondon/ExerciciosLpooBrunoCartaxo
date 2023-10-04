@@ -3,17 +3,38 @@ package Herança;
 public class ContaCorrente {
       private int numero;
       private double Saldo;
-	private ContaCorrente(int numero, double Saldo) {
+private ContaCorrente(int numero, double Saldo) {
 		this.numero = numero;
 		this.Saldo = Saldo;
+		
 	}
-   public double Depositar(double Saldo,double valor) {
-	   double saldoatual = Saldo + valor;
-	   return saldoatual;
+
+public int getNumero() {
+	return numero;
+}
+
+public void setNumero(int numero) {
+	this.numero = numero;
+}
+
+public double getSaldo() {
+	return Saldo;
+}
+
+public void setSaldo(double saldo) {
+	Saldo = saldo;
+}
+public void Depositar(double valor) {
+	   if (valor<0) {
+		System.out.println("valor invalido");
 	}
-   public double Sacar(double Saldo,double valor) {
-	   double saldoatual = Saldo - valor;
-	   return saldoatual;
+	   else {
+		   Saldo+=valor;
+	   }
+	}
+   public void Sacar(double valor) {
+	   Saldo-=valor;
+	  
 	  }
    public double AplicarJuros(double Saldo,int NumeroMeses) {
 	   double saldoatual =Saldo*(1.005*NumeroMeses);
@@ -23,11 +44,7 @@ public class ContaCorrente {
 	   System.out.println("Saldo:" +Saldo );
    }
     public static void main(String[] args) {
-		ContaCorrente conta=new ContaCorrente(138450,1000);
-		conta.ImprimirSaldo();
-		conta.Depositar(1000,100);
-		conta.ImprimirSaldo();
-		conta.Depositar(1100,400);
+		
 	}
 }
    
